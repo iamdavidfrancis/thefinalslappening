@@ -11,7 +11,7 @@ $(document).ready(function() {
     
     return {
       total: t,
-      years: years
+      years: years,
       days: days,
       hours: hours,
       minutes: minutes,
