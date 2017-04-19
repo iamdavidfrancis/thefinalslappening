@@ -3,6 +3,18 @@ $(document).ready(function() {
   
   function getRemainingTime(end) {
     var t = (Date.parse(end) - Date.parse(new Date())) / 1000;
+    
+    if (t <= 0) {
+      return {
+        total: 0,
+        years: 0,
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+      } 
+    }
+    
     var seconds = Math.floor(t % 60);
     var minutes = Math.floor( (t / 60) % 60);
     var hours = Math.floor( (t / (60*60)) % 24);
