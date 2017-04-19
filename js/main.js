@@ -2,7 +2,7 @@ $(document).ready(function() {
   var countdownDate = new Date(2018, 9, 01, 20, 0, 0); // YYYY, MM (0 indexed), DD, HH, MM, SS
   
   function getRemainingTime(end) {
-    var diff = (Date.parse(end) - Date.parse(new Date())) / 1000;
+    var t = (Date.parse(end) - Date.parse(new Date())) / 1000;
     var seconds = Math.floor(t % 60);
     var minutes = Math.floor( (t / 60) % 60);
     var hours = Math.floor( (t / (60*60)) % 24);
