@@ -44,7 +44,7 @@ $(document).ready(function() {
     var remainingString = "";
     
     if (remaining.years) {
-      remainingString += remaining.years;
+      remainingString += pad(remaining.years, 2);
       remainingString += " Year";
       if (remaining.years > 1) {
         remainingString += "s";
