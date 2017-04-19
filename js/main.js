@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var countdownDate = new Date(2016, 9, 01, 20, 0, 0); // YYYY, MM (0 indexed), DD, HH, MM, SS
+  var countdownDate = new Date(2018, 9, 01, 20, 0, 0); // YYYY, MM (0 indexed), DD, HH, MM, SS
   var color = "#FFF";
   
   function getRemainingTime(end) {
