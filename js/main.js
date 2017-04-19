@@ -49,10 +49,22 @@ $(document).ready(function() {
     }
     
     remainingString += pad(remaining.hours, 2);
-    remainingString += ":";
+    remainingString += " Hour";
+    if (remaining.hours != 1) {
+      remainingString += "s";
+    }
+    remainingString += " "
     remainingString += pad(remaining.minutes, 2);
-    remainingString += ":";
+    remainingString += " Minute";
+    if (remaining.minutes != 1) {
+      remainingString += "s";
+    }
+    remainingString += " "
     remainingString += pad(remaining.seconds, 2);
+    remainingString += " Second";
+    if (remaining.seconds != 1) {
+      remainingString += "s";
+    }
 
     $("#countdown").text(remainingString);
   }, 1000);
