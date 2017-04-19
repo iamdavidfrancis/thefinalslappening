@@ -91,5 +91,5 @@ $(document).ready(function() {
     
     $("#countdown").css("color", color);
     
-  }, 1000);
+  }, 500);
 });
