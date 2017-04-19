@@ -45,6 +45,9 @@ $(document).ready(function() {
     
     if (remaining.years) {
       remainingString += pad(remaining.years, 2);
+      if (remaining.days > 99) {
+        remainingString += "&nbsp;";
+      }
       remainingString += " Year";
       if (remaining.years > 1) {
         remainingString += "s";
@@ -62,18 +65,27 @@ $(document).ready(function() {
     }
     
     remainingString += pad(remaining.hours, 2);
+    if (remaining.days > 99) {
+      remainingString += "&nbsp;";
+    }
     remainingString += " Hour";
     if (remaining.hours != 1) {
       remainingString += "s";
     }
     remainingString += "<br>"
     remainingString += pad(remaining.minutes, 2);
+    if (remaining.days > 99) {
+      remainingString += "&nbsp;";
+    }
     remainingString += " Minute";
     if (remaining.minutes != 1) {
       remainingString += "s";
     }
     remainingString += "<br>"
     remainingString += pad(remaining.seconds, 2);
+    if (remaining.days > 99) {
+      remainingString += "&nbsp;";
+    }
     remainingString += " Second";
     if (remaining.seconds != 1) {
       remainingString += "s";
