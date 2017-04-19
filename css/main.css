@@ -7,7 +7,7 @@ body {
   background-color: #000;
 }
 
-#wrapper {
+#wrap {
   display: flex;
   height: 100%;
   width: 100%;
