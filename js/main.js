@@ -49,7 +49,7 @@ $(document).ready(function() {
       if (remaining.years > 1) {
         remainingString += "s";
       }
-      remainingString += " ";
+      remainingString += "<br>";
     }
     
     if (remaining.days) {
@@ -58,7 +58,7 @@ $(document).ready(function() {
       if (remaining.days > 1) {
         remainingString += "s";
       }
-      remainingString += " ";
+      remainingString += "<br>";
     }
     
     remainingString += pad(remaining.hours, 2);
@@ -66,20 +66,20 @@ $(document).ready(function() {
     if (remaining.hours != 1) {
       remainingString += "s";
     }
-    remainingString += " "
+    remainingString += "<br>"
     remainingString += pad(remaining.minutes, 2);
     remainingString += " Minute";
     if (remaining.minutes != 1) {
       remainingString += "s";
     }
-    remainingString += " "
+    remainingString += "<br>"
     remainingString += pad(remaining.seconds, 2);
     remainingString += " Second";
     if (remaining.seconds != 1) {
       remainingString += "s";
     }
 
-    $("#countdown").text(remainingString);
+    $("#countdown").html(remainingString);
     
     if (remaining.total == 0) {
       if (color == "#FFF") {
