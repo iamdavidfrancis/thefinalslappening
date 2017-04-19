@@ -1,5 +1,6 @@
 $(document).ready(function() {
-  var countdownDate = new Date(2018, 9, 01, 20, 0, 0); // YYYY, MM (0 indexed), DD, HH, MM, SS
+  var countdownDate = new Date(2016, 9, 01, 20, 0, 0); // YYYY, MM (0 indexed), DD, HH, MM, SS
+  var color = "#FFF";
   
   function getRemainingTime(end) {
     var t = (Date.parse(end) - Date.parse(new Date())) / 1000;
@@ -79,5 +80,16 @@ $(document).ready(function() {
     }
 
     $("#countdown").text(remainingString);
+    
+    if (remaining.total == 0) {
+      if (color == "#FFF") {
+        color = "#F00";
+      } else {
+        color = "#FFF"; 
+      }
+    }
+    
+    $("#countdown").css("color", color);
+    
   }, 1000);
 });
