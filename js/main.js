@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  // Currently set to Oct 1, 2018 at 8pm local time
   var countdownDate = new Date(2018, 9, 01, 20, 0, 0); // YYYY, MM (0 indexed), DD, HH, MM, SS
   var color = "#FFF";
   
