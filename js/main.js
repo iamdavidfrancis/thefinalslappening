@@ -1,6 +1,6 @@
 $(document).ready(function() {
   // Currently set to Oct 1, 2018 at 8pm local time
-  var countdownDate = new Date(2018, 9, 01, 20, 0, 0); // YYYY, MM (0 indexed), DD, HH, MM, SS
+  var countdownDate = new Date('2018-10-14T14:00:00-05:00'); // ISO 8601 formatted date.
   var color = "#FFF";
   
   function getRemainingTime(end) {
